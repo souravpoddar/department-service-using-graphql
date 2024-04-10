@@ -1,0 +1,16 @@
+type Department{
+	id: String
+	departmentName: String
+	departmentAddress: String
+	departmentCode: String
+}
+
+type Query{
+	findAll : [Department]
+	findOne(departmentName: String): Department
+	findById(id: String): Department
+}
+
+type Mutation{
+	create(department: Department): Department
+}
